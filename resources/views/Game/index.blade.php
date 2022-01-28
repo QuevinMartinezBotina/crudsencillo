@@ -3,13 +3,13 @@
 @section('content')
     <div class="row">
         @foreach ($games as $game)
-            <div class="col-md-3 d-flex justify-content-center my-4 shadow-lg">
+            <div class="col-md-3 d-flex justify-content-center my-4 ">
                 <div class="card text-center text-dark" style="width: 18rem;">
-                    <div class="card-body ">
+                    <div class="card-body shadow rounded">
                         <a href="{{ route('Game.show', ['Game' => $game->id]) }}">
                             <h5 class="card-title h2">{{ $game->titulo }}</h5>
                         </a>
-                        <hr class="shadow-lg">
+                        <hr class="">
                         <p class="card-text">EL precio de <strong>{{ $game->titulo }}</strong> es de
                             <strong>${{ number_format($game->precio, 2, ',', '.') }}</strong> pesos cop 🇨🇴
                         </p>

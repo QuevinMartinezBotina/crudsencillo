@@ -23,13 +23,13 @@
         }
 
     </style>
-    <title>Games</title>
+    <title>SoftLithe</title>
 </head>
 
-<body class="bg-dark text-white">
+<body class=" ">
 
     {{-- Menú de navegación --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             {{-- <a class="navbar-brand" href="#">SoftLithe</a> --}}
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -55,6 +55,19 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{ route('Game.index') }}">Home</a></li>
                             <li><a class="dropdown-item" href="{{ route('Game.create') }}">Crear</a></li>
+                            {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{{ route('Product.index') }}">Home</a></li>
+                            <li><a class="dropdown-item" href="{{ route('Game.catalogo') }}">Catalogo</a></li>
+                            <li><a class="dropdown-item" href="{{ route('Product.create') }}">Crear</a></li>
                             {{-- <li><a class="dropdown-item" href="#">Something else here</a></li> --}}
                         </ul>
                     </li>

@@ -27,3 +27,5 @@ Route::get('/app', function () {
 Route::resource('/Game', GameController::class);
 
 Route::resource('/Product', ProductController::class);
+
+Route::get('/index', [ProductController::class, 'catalogo'])->name('Game.catalogo');

@@ -21,6 +21,19 @@ class ProductController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function catalogo()
+    {
+        $products = Product::all();
+
+        return view('Product.catalogo', compact('products'));
+    }
+
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -65,7 +78,7 @@ class ProductController extends Controller
      */
     public function show(Product $Product)
     {
-        return view('Product.show',compact('Product'));
+        return view('Product.show', compact('Product'));
     }
 
     /**
@@ -76,7 +89,7 @@ class ProductController extends Controller
      */
     public function edit(Product $Product)
     {
-        return view('Product.edit',compact('Product'));
+        return view('Product.edit', compact('Product'));
     }
 
     /**
@@ -119,6 +132,6 @@ class ProductController extends Controller
     {
         $Product->delete();
 
-        return redirect()->route('Product.index')->with('success','Product deleted successfully');
+        return redirect()->route('Product.index')->with('success', 'Product deleted successfully');
     }
 }
