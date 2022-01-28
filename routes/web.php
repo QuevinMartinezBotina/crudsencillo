@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,7 @@ Route::get('/app', function () {
     return view('app');
 })->name('principal'); */
 
+
 Route::resource('/Game', GameController::class);
+
+Route::resource('/Product', ProductController::class);
