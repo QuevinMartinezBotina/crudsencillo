@@ -39,7 +39,7 @@ class GameController extends Controller
     {
         $request->validate([
             'titulo' => 'required|min:4',
-            'precio' => 'required'
+            'precio' => 'required',
         ]);
 
         $game = new Game();
